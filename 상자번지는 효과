@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .login-container {
+            width: 320px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .login-container input[type="text"]:focus, .login-container input[type="password"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+            outline: none;
+        }
+        .login-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .login-container label {
+            display: block;
+            margin: 10px 0;
+        }
+        .login-container .ip-security {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .login-container .ip-security input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .login-container .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #22b14c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container .login-btn:hover {
+            background-color: #1e9e42;
+        }
+        .login-container .links {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-container .links a {
+            margin: 0 10px;
+            color: #22b14c;
+            text-decoration: none;
+        }
+        .login-container .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form action="#" method="post">
+            <label for="username">아이디 또는 전화번호</label>
+            <input type="text" id="username" name="username" value="spin733" required>
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+            
+            <div class="ip-security">
+                <input type="checkbox" id="stay-logged-in" name="stay-logged-in" checked>
+                <label for="stay-logged-in">로그인 상태 유지</label>
+                <label for="ip-security">IP보안</label>
+                <input type="checkbox" id="ip-security" name="ip-security" checked>
+            </div>
+            
+            <button type="submit" class="login-btn">로그인</button>
+        </form>
+        
+        <div class="links">
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>
