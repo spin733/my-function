@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        span {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>I am a <span id="typing-text"></span></h1>
+
+<script>
+    // The text to be typed out
+    const text = "coding lady";
+    
+    // Split the text into an array of characters
+    const characters = text.split("");
+
+    // Target the span element where the text will be displayed
+    const spanElement = document.getElementById("typing-text");
+
+    // The function that types the text
+    function writeTxt() {
+        if (characters.length > 0) {
+            // Remove the first character from the array and add it to the span
+            spanElement.innerHTML += characters.shift();
+            
+            // Call the function again after a random delay between 100ms and 200ms
+            setTimeout(writeTxt, 100 + Math.floor(Math.random() * 100));
+        }
+    }
+
+    // Start the typing effect
+    writeTxt();
+</script>
+
+</body>
+</html>
